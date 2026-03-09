@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="quiz-wrapper">
+
+    <!-- PANTALLA DE INICIO -->
+    <div class="screen" id="screen-start">
+      <div class="badge">CUESTIONARIO</div>
+      <h1 class="title">¿Cuánto sabes <em>de osvaldo</em>?</h1>
+      <p class="subtitle">Responde las preguntas y descubre tu puntuación final.</p>
+      <button class="btn-primary" id="btn-start">Comenzar</button>
+    </div>
+
+    <!-- PANTALLA DE PREGUNTA -->
+    <div class="screen hidden" id="screen-question">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="meta">
+        <span id="question-counter">Pregunta 1 de 5</span>
+        <span id="score-display">Puntos: 0</span>
+      </div>
+      <div class="question-card">
+        <p class="question-text" id="question-text">¿Cuál es es color favorito de osvaldo?</p>
+        <div class="options-grid" id="options-grid">
+          <!-- Las opciones se generan con JS -->
+        </div>
+      </div>
+      <button class="btn-secondary hidden" id="btn-next">Siguiente →</button>
+    </div>
+
+    <!-- PANTALLA DE RESULTADO -->
+    <div class="screen hidden" id="screen-result">
+      <div class="result-icon" id="result-icon">🏆</div>
+      <h2 class="result-title" id="result-title">¡Excelente!</h2>
+      <p class="result-score" id="result-score">Obtuviste <strong>5 / 5</strong></p>
+      <p class="result-message" id="result-message">Eres un experto. ¡Felicidades!</p>
+      <button class="btn-primary" id="btn-restart">Volver a jugar</button>
+    </div>
+
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
